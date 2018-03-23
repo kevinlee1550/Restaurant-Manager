@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Orderly: A POS System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <!-- POS navigation -->
+    <header  class="navbar header-bg navbar-expand-md ">
+      <div class="header-title">
+        <h3>Orderly</h3>
+      </div>
+      <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <button class="btn btn-outline-secondary">Sign Out</button>
+          </li>
+      </ul>
+    </header>
+  <!-- POS System -->
+  <section id="pos">
+    <div class="container-fluid">
+      <div class="row no-gutters">
+        <!-- POS Navigation -->
+        <div class="col-md-2 pos-nav">
+          <ul id="nav-list" class="list-group">
+            <li class="list-group-item">Entrees</li>
+            <li class="list-group-item">Appetizers</li>
+            <li class="list-group-item">Specials</li>
+            <li class="list-group-item">Salads</li>
+            <li class="list-group-item">Soda</li>
+            <li class="list-group-item">Wines</li>
+            <li class="list-group-item">Beer</li>
+            <li class="list-group-item">Deserts</li>
+          </ul>
+        </div>
+        <!-- POS Food List -->
+        <div class="col-md-7 pos-food-list">
+          <div class="container">
+            <div class="row">
+
+            </div>
+          </div>
+        </div>
+        <!-- POS Order -->
+        <div class="col-md-3 card pos-order">
+          <div class="pos-order-content">
+            <h3 class="order-details-header">Order Details</h3>
+              <ul>
+              </ul>
+          </div>
+            <div class="pos-order-footer">
+              <div class="pos-total">
+                <h3>Total</h3>
+                <p><span class="price">$0.00</span></p>
+              </div>
+              <div class="pos-sumbit">
+                <button class="btn  btn-success" type="button"><h5>PLACE ORDER</h5></button>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal-containers">
+
+  </div>
+
+  <!-- Entree Modals -->
+  <div id="entreemodal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Western Cheeseburger</h5>
+      </div>
+      <div class="modal-body">
+              <div class="options">
+                <div class="container">
+                  <div class="row">
+                      <div class="col-md-3">
+                        <h5>Cheese</h5>
+                      </div>
+                      <div class="col-md-9">
+                        <div class="options-cheese">
+                          <input  type="radio" name="cheese-option" value="W/Cheese">
+                          <label for="w-cheese">Cheese</label>
+                          <input  type="radio" name="cheese-option" value="N/Cheese">
+                          <label for="n-cheese">No Cheese</label>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <h5>Lettuce</h5>
+                    </div>
+                    <div class="col-md-9">
+                      <div class="options-Lettuce">
+                        <input  type="radio" name="Lettuce-option" value="W/Lettuce">
+                        <label for="">Lettuce</label>
+
+                        <input  type="radio" name="Lettuce-option" value="N/Lettuce">
+                        <label for="n-Lettuce">No Lettuce</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <h5>Pickles</h5>
+                    </div>
+                    <div class="col-md-9">
+                      <div class="options-Pickles">
+                        <input  type="radio" name="Pickles-option" value="W/Pickles">
+                        <label for="w-Pickles">Pickles</label>
+
+                        <input  type="radio" name="Picles-option" value="N/Pickles">
+                        <label for="n-Pickles">No Pickles</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      </div>
+      <div class="modal-order">
+        <div class="item-price">
+          <h4>Price:</h4>
+          <h5 class="price">$11.50</h5>
+        </div>
+        <button  type="button" data-dismiss="modal" class="btn btn-primary entree-btn-order">Add Order</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- Appetizer Modals -->
+ <div id="appetizermodal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Nachos</h5>
+      </div>
+      <div class="modal-body">
+              <div class="options">
+                <div class="container">
+                  <div class="row">
+                      <div class="col-md-3">
+                        <h5>Cheese</h5>
+                      </div>
+                      <div class="col-md-9">
+                        <div class="options-cheese">
+                          <input  type="radio" name="cheese-option" value="W/Cheese">
+                          <label for="w-cheese">Cheese</label>
+                          <input  type="radio" name="cheese-option" value="N/Cheese">
+                          <label for="n-cheese">No Cheese</label>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <h5>Chili</h5>
+                    </div>
+                    <div class="col-md-9">
+                      <div class="options-Chili">
+                        <input  type="radio" name="Chili-option" value="W/Chili">
+                        <label for="">Chili</label>
+
+                        <input  type="radio" name="Chili-option" value="N/Chili">
+                        <label for="n-Chili">No Chili</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <h5>Sour Cream</h5>
+                    </div>
+                    <div class="col-md-9">
+                      <div class="options-Sour Cream">
+                        <input  type="radio" name="Sour Cream-option" value="W/Sour Cream">
+                        <label for="w-Sour Cream">Sour Cream</label>
+
+                        <input  type="radio" name="Sour Cream-option" value="N/Sour Cream">
+                        <label for="n-Sour Cream">No Sour Cream </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      </div>
+      <div class="modal-order">
+        <div class="item-price">
+          <h4>Price:</h4>
+          <h5 class="price">$7.50</h5>
+        </div>
+        <button  type="button" data-dismiss="modal" class="btn btn-primary appetizer-btn-order">Add Order</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Soda Modals -->
+<div id="sodamodal" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Pepsi</h5>
+        </div>
+        <div class="modal-body">
+                <div class="options">
+                  <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                          <h5>Ice</h5>
+                        </div>
+                        <div class="col-md-9">
+                          <div class="options-cheese">
+                            <input  type="radio" name="ice-option" value="W/Ice">
+                            <label for="w-Ice">Ice</label>
+                            <input  type="radio" name="cheese-option" value="N/Ice">
+                            <label for="n-Ice">No Ice</label>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+        </div>
+        <div class="modal-order">
+          <div class="item-price">
+            <h4>Price:</h4>
+            <h5 class="price">$7.50</h5>
+          </div>
+          <button  type="button" data-dismiss="modal" class="btn btn-primary soda-btn-order">Add Order</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Specials Modals -->
+ <div id="specialsmodal" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"></h5>
+        </div>
+        <div class="modal-body">
+                <div class="options">
+                  <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                          <h5>Cheese</h5>
+                        </div>
+                        <div class="col-md-9">
+                          <div class="options-cheese">
+                            <input  type="radio" name="cheese-option" value="W/Cheese">
+                            <label for="w-cheese">Cheese</label>
+                            <input  type="radio" name="cheese-option" value="N/Cheese">
+                            <label for="n-cheese">No Cheese</label>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-3">
+                        <h5>Chili</h5>
+                      </div>
+                      <div class="col-md-9">
+                        <div class="options-Chili">
+                          <input  type="radio" name="Chili-option" value="W/Chili">
+                          <label for="">Chili</label>
+  
+                          <input  type="radio" name="Chili-option" value="N/Chili">
+                          <label for="n-Chili">No Chili</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-3">
+                        <h5>Sour Cream</h5>
+                      </div>
+                      <div class="col-md-9">
+                        <div class="options-Sour Cream">
+                          <input  type="radio" name="Sour Cream-option" value="W/Sour Cream">
+                          <label for="w-Sour Cream">Sour Cream</label>
+  
+                          <input  type="radio" name="Sour Cream-option" value="N/Sour Cream">
+                          <label for="n-Sour Cream">No Sour Cream </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        </div>
+        <div class="modal-order">
+          <div class="item-price">
+            <h4>Price:</h4>
+            <h5 class="price">$7.50</h5>
+          </div>
+          <button  type="button" data-dismiss="modal" class="btn btn-primary appetizer-btn-order">Add Order</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="./js/main.js" charset="utf-8"></script>
+  </body>
+</html>

@@ -1,0 +1,202 @@
+body{
+  font-size: 16px;
+}
+
+/* Remove Padding from the left and right side of the pages */
+.container-fluid{
+  padding: 0;
+}
+
+.card{
+  padding-bottom: 0;
+  border: 0;
+}
+
+/* Green Color for Prices */
+.price{
+  color: #22FF00;
+}
+
+
+/****************************
+  POS Header Styles
+******************************/
+.header-bg{
+  background: #14C7BE;
+  color: white;
+}
+
+header .header-title{
+  width: 50%;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+header ul{
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+header .btn {
+  border-color: white;
+  color: white;
+}
+
+/****************************
+  POS Background
+*****************************/
+#pos{
+  background-color: #4C5C68;
+  min-height: 600px;
+}
+
+/*******************************
+  POS Navigation Styles
+********************************/
+#pos .pos-nav li{
+  font-size: 2.08rem;
+}
+
+.pos-nav-click{
+  background-color: #EC4E20;
+  color: white;
+}
+
+/**************************
+  POS Food List Styles
+****************************/
+
+.pos-food-list .row{
+  display: flex;
+  justify-content: center;
+}
+
+.pos-food-list .card{
+  height: 280px;
+  margin-top: 1rem;
+}
+
+.pos-food-list button{
+  width: 75%;
+  margin: 0.5rem auto;
+}
+
+
+/*************************
+  POS Order Details
+**************************/
+.pos-order{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 600px;
+}
+
+.pos-order ul{
+  padding-left: 0;
+}
+
+ .pos-order-content ul{
+  list-style-type: none;
+}
+
+ .order-details-header{
+  text-align: center;
+  border-bottom: 1px solid black;
+  padding: 1rem 0;
+}
+
+ .pos-order-content li{
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid black;
+  padding: 0 1rem;
+}
+
+.pos-order-content li div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ .pos-order-content h5{
+  font-size: 1.75rem;
+}
+
+ .pos-order-content p{
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.pos-order-content .t-order{
+  margin-left: 1.25rem;
+  font-size: 0.75rem;
+  margin-bottom: 0;
+  position: relative;
+  bottom: 7px;
+}
+
+.pos-order-footer{
+  display: flex;
+  flex-direction: column;
+}
+
+.pos-order-footer .pos-total{
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: 0 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.pos-total h3{
+    font-size: 2.25rem;
+}
+
+.pos-total p{
+  font-size: 1.625rem;
+  font-weight: 600;
+  position: relative;
+  top: 5px;
+}
+
+.pos-order-footer button{
+  padding: 0.6rem 0;
+  width: 100%;
+}
+
+/*************************
+  POS Modal Styles
+**************************/
+.modal-order{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 0.75rem;
+  margin: 0 0.75rem 0.5rem 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.modal-order .item-price{
+  display: flex;
+  align-items: center;
+}
+
+.item-price h4{
+  margin-right: 0.5rem;
+}
+
+.item-price h5{
+  position: relative;
+  top: 0.1rem;
+}
+
+.options .row{
+  border-bottom: 1px solid black;
+  padding: 5px 0;
+}
+
+
+.options .input{
+  margin-left: 10px;
+}
