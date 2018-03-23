@@ -70,7 +70,7 @@ var appController = (function(priceCtrl, UICtrl){
   $('.entree-btn-order').on("click", function(event){
      let itemName = $(event.target).parent().parent().find('.modal-title').text();
      let price = $(event.target).parent().find('.item-price .price').text().substring(1);
-    let options = $('#mymodal .options .row').find(':checked');
+    let options = $('#entreemodal .options .row').find(':checked');
    let optionList = []
     for(let i = 0; i < options.length; i++){
       optionList[i] = options[i].value;
@@ -102,11 +102,11 @@ var appController = (function(priceCtrl, UICtrl){
    updateOrder(itemName, price, optionList)
  });
 
- /* For soda modal*/
- $('.soda-btn-order').on("click", function(event){
+ /* For specials modal*/
+$('.specials-btn-order').on("click", function(event){
   let itemName = $(event.target).parent().parent().find('.modal-title').text();
   let price = $(event.target).parent().find('.item-price .price').text().substring(1);
- let options = $('#sodamodal .options .row').find(':checked');
+ let options = $('#specialsmodal .options .row').find(':checked');
 let optionList = []
  for(let i = 0; i < options.length; i++){
    optionList[i] = options[i].value;
@@ -125,6 +125,102 @@ let optionList = []
     priceCtrl.updateTotalPrice(newPrice);
 
   }
+
+  /* For salads modal*/
+$('.salads-btn-order').on("click", function(event){
+  let itemName = $(event.target).parent().parent().find('.modal-title').text();
+  let price = $(event.target).parent().find('.item-price .price').text().substring(1);
+ let options = $('#saladsmodal .options .row').find(':checked');
+let optionList = []
+ for(let i = 0; i < options.length; i++){
+   optionList[i] = options[i].value;
+ }
+ optionList = optionList.join(' | ');
+
+ // Pass the price to the price adjuster function so it can be manipulates
+ priceAdjuster(price);
+
+ // pass the itemName and optionList to update orders- 
+ updateOrder(itemName, price, optionList)
+});
+
+  // 5. Update the total price in the priceController
+  function priceAdjuster(newPrice){
+    priceCtrl.updateTotalPrice(newPrice);
+
+  }
+
+   /* For soda modal*/
+ $('.soda-btn-order').on("click", function(event){
+  let itemName = $(event.target).parent().parent().find('.modal-title').text();
+  let price = $(event.target).parent().find('.item-price .price').text().substring(1);
+ let options = $('#sodamodal .options .row').find(':checked');
+let optionList = []
+ for(let i = 0; i < options.length; i++){
+   optionList[i] = options[i].value;
+ }
+ optionList = optionList.join(' | ');
+
+ // Pass the price to the price adjuster function so it can be manipulates
+ priceAdjuster(price);
+
+ // pass the itemName and optionList to update orders- 
+ updateOrder(itemName, price, optionList)
+});
+
+ /* For soda modal*/
+ $('.wines-btn-order').on("click", function(event){
+  let itemName = $(event.target).parent().parent().find('.modal-title').text();
+  let price = $(event.target).parent().find('.item-price .price').text().substring(1);
+ let options = $('#winesmodal .options .row').find(':checked');
+let optionList = []
+ for(let i = 0; i < options.length; i++){
+   optionList[i] = options[i].value;
+ }
+ optionList = optionList.join(' | ');
+
+ // Pass the price to the price adjuster function so it can be manipulates
+ priceAdjuster(price);
+
+ // pass the itemName and optionList to update orders- 
+ updateOrder(itemName, price, optionList)
+});
+
+ /* For beer modal*/
+ $('.beer-btn-order').on("click", function(event){
+  let itemName = $(event.target).parent().parent().find('.modal-title').text();
+  let price = $(event.target).parent().find('.item-price .price').text().substring(1);
+ let options = $('#beermodal .options .row').find(':checked');
+let optionList = []
+ for(let i = 0; i < options.length; i++){
+   optionList[i] = options[i].value;
+ }
+ optionList = optionList.join(' | ');
+
+ // Pass the price to the price adjuster function so it can be manipulates
+ priceAdjuster(price);
+
+ // pass the itemName and optionList to update orders- 
+ updateOrder(itemName, price, optionList)
+});
+
+  /* For soda modal*/
+ $('.deserts-btn-order').on("click", function(event){
+  let itemName = $(event.target).parent().parent().find('.modal-title').text();
+  let price = $(event.target).parent().find('.item-price .price').text().substring(1);
+ let options = $('#desertsmodal .options .row').find(':checked');
+let optionList = []
+ for(let i = 0; i < options.length; i++){
+   optionList[i] = options[i].value;
+ }
+ optionList = optionList.join(' | ');
+
+ // Pass the price to the price adjuster function so it can be manipulates
+ priceAdjuster(price);
+
+ // pass the itemName and optionList to update orders- 
+ updateOrder(itemName, price, optionList)
+});
 
   // 6. Update the Order Details with the new item and total price
   function updateOrder(itemName, price,  options){
